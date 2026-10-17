@@ -156,26 +156,36 @@ _LABORATOIRE = [
 RUBRIQUES = {
     "caisse": {
         "titre": "Audit Caisse",
+        "couleur": "#2563EB",
+        "icone": "point_of_sale",  # icône Material Symbols
         "description": "Grille Caissier : merchandising, organisation de la caisse, produits, hygiène et accueil.",
         "points": _CAISSE,
     },
     "responsable_magasin": {
         "titre": "Audit Responsable Magasin",
+        "couleur": "#7C3AED",
+        "icone": "storefront",  # icône Material Symbols
         "description": "Étal, hygiène des locaux et du personnel, produits, sécurité alimentaire, gestion.",
         "points": _RESPONSABLE_MAGASIN,
     },
     "zone_stockage": {
         "titre": "Audit Zone de stockage",
+        "couleur": "#D97706",
+        "icone": "inventory_2",  # icône Material Symbols
         "description": "Réserve, chambres froides, rotation et traçabilité des stocks (grille provisoire).",
         "points": _ZONE_STOCKAGE,
     },
     "cuisine": {
         "titre": "Audit Cuisine",
+        "couleur": "#E11D48",
+        "icone": "skillet",  # icône Material Symbols
         "description": "Hygiène, HACCP et bonnes pratiques de production (grille provisoire).",
         "points": _CUISINE,
     },
     "laboratoire": {
         "titre": "Audit Laboratoire",
+        "couleur": "#0D9488",
+        "icone": "science",  # icône Material Symbols
         "description": "Atelier de fabrication : hygiène, traçabilité et contrôles (grille provisoire).",
         "points": _LABORATOIRE,
     },
