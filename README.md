@@ -17,6 +17,10 @@ Sans configuration, la base est un fichier SQLite `audits.db` créé à côté d
 3. Dans « Advanced settings » > « Secrets », coller :
 
        DATABASE_URL = "postgresql://utilisateur:motdepasse@hote/base?sslmode=require"
+       APP_PASSWORD = "mot de passe d'accès à l'application"
+
+`APP_PASSWORD` est facultatif : s'il est défini, l'application demande ce mot de passe avant tout accès
+(utile si le dépôt est public). Les secrets ne sont jamais dans le dépôt.
 
 Les tables sont créées automatiquement au premier lancement. Sans `DATABASE_URL`, l'application en ligne
 utiliserait SQLite sur le serveur Streamlit, qui est effacé à chaque redémarrage : les fiches seraient perdues.

@@ -4,6 +4,7 @@ Lancement local :  streamlit run app.py
 En ligne : renseigner DATABASE_URL dans les secrets Streamlit pour une base Postgres persistante.
 """
 
+import hmac
 import os
 from datetime import date
 
@@ -19,15 +20,30 @@ st.set_page_config(page_title="Audit Retail", page_icon="✅", layout="wide")
 
 @st.cache_resource
 def engine():
-    url = None
+    return core.moteur(secret("DATABASE_URL"))
+
+
+def secret(nom):
     try:
-        url = st.secrets.get("DATABASE_URL")
+        return st.secrets.get(nom) or os.environ.get(nom)
     except Exception:  # pas de fichier secrets en local
-        pass
-    return core.moteur(url or os.environ.get("DATABASE_URL"))
+        return os.environ.get(nom)
 
 
 ss = st.session_state
+
+# Accès protégé par mot de passe dès que APP_PASSWORD est défini (secrets Streamlit).
+MOT_DE_PASSE = secret("APP_PASSWORD")
+if MOT_DE_PASSE and not ss.get("connecte"):
+    st.title("Audit Retail")
+    with st.form("connexion"):
+        saisi = st.text_input("Mot de passe", type="password")
+        if st.form_submit_button("Se connecter", type="primary"):
+            if hmac.compare_digest(saisi, MOT_DE_PASSE):
+                ss.connecte = True
+                st.rerun()
+            st.error("Mot de passe incorrect.")
+    st.stop()
 ss.setdefault("page", "Accueil")
 ss.setdefault("rubrique", next(iter(RUBRIQUES)))
 ss.setdefault("version_form", 0)
