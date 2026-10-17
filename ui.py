@@ -93,6 +93,9 @@ div[class*="st-key-go_"] button {{ border-radius:10px; font-weight:600; }}
 .bandeau .logos {{ margin-left:auto; display:flex; gap:14px; }}
 .bandeau .logos img {{ width:92px; height:92px; border-radius:50%; background:#fff; padding:3px;
                        box-shadow:0 6px 18px rgba(0,0,0,.25); }}
+.etat-base {{ background:#4ADE80; border-radius:12px; padding:12px 14px; display:flex; gap:10px; align-items:flex-start;
+              font-size:14px; font-weight:600; word-break:break-word; margin-top:8px; }}
+section[data-testid="stSidebar"] .etat-base, section[data-testid="stSidebar"] .etat-base * {{ color:#052E16; }}
 .marques {{ display:flex; justify-content:center; gap:12px; margin:6px 0 16px; }}
 .marques img {{ width:64px; height:64px; border-radius:50%; background:#fff; padding:2px; }}
 @media (max-width:700px) {{ .bandeau {{ flex-wrap:wrap; }} .bandeau .logos {{ margin-left:0; }}
@@ -179,3 +182,8 @@ def zone(titre):
 
 def badge(texte, couleur):
     return f'<span class="badge" style="background:{teinte(couleur, .12)};color:{couleur}">{e(texte)}</span>'
+
+
+def etat_base(texte):
+    """Encadré vert clair de la barre latérale : l'application est branchée sur la base PostgreSQL."""
+    st.markdown(f'<div class="etat-base">{icone("database", 20)}<span>{e(texte)}</span></div>', unsafe_allow_html=True)

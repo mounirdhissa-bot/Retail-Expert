@@ -89,7 +89,7 @@ with st.sidebar:
     # Base active : permet de vérifier que l'application en ligne écrit bien dans Neon.
     info = core.info_base(engine())
     if info["type"] == "postgresql":
-        st.success(f"Base : PostgreSQL ({info['hote']}) · {info['nb_fiches']} fiche(s)", icon="🗄️")
+        ui.etat_base(f"Base : PostgreSQL ({info['hote']}) · {info['nb_fiches']} fiche(s)")
     elif os.path.isdir("/mount/src"):  # répertoire des applications Streamlit Community Cloud
         st.error("Base : SQLite temporaire. DATABASE_URL n'est pas défini dans les secrets : "
                  "les fiches seront perdues au prochain redémarrage.", icon="⚠️")
