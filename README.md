@@ -1,4 +1,4 @@
-# Application d'audit retail
+# Retail Expert : application d'audit retail
 
 Saisie des fiches d'audit, calcul du score et historisation dans une base SQL.
 Application Streamlit, mise en ligne comme IBP Master (GitHub + Streamlit Community Cloud).

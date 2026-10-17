@@ -128,7 +128,7 @@ section[data-testid="stSidebar"] .etat-base, section[data-testid="stSidebar"] .e
 
 def marque():
     st.markdown(f"""<div class="marque"><div class="logo">{icone('fact_check', 24, '#fff')}</div>
-<div><b>Audit Retail</b><small>Suivi de la performance</small></div></div>""", unsafe_allow_html=True)
+<div><b>Retail Expert</b><small>Suivi de la performance</small></div></div>""", unsafe_allow_html=True)
 
 
 def bandeau(titre, sous_titre, nom_icone, couleur, fond=None, logos=False):

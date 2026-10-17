@@ -16,7 +16,7 @@ import ui
 from rubriques import (COEF_CRITIQUE, EVALUATIONS, RUBRIQUES, SEUIL_A_AMELIORER,
                        SEUIL_SATISFAISANT)
 
-st.set_page_config(page_title="Audit Retail", page_icon=":material/fact_check:", layout="wide")
+st.set_page_config(page_title="Retail Expert", page_icon=":material/fact_check:", layout="wide")
 ui.css()
 
 
@@ -37,7 +37,7 @@ ss = st.session_state
 # Accès protégé par mot de passe dès que APP_PASSWORD est défini (secrets Streamlit).
 MOT_DE_PASSE = secret("APP_PASSWORD")
 if MOT_DE_PASSE and not ss.get("connecte"):
-    ui.bandeau("Audit Retail", "Accès réservé : saisissez le mot de passe.", "lock", ui.MARINE,
+    ui.bandeau("Retail Expert", "Accès réservé : saisissez le mot de passe.", "lock", ui.MARINE,
                fond=ui.FOND_MARQUE, logos=True)
     with st.form("connexion"):
         saisi = st.text_input("Mot de passe", type="password")
