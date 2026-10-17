@@ -25,6 +25,12 @@ Sans configuration, la base est un fichier SQLite `audits.db` créé à côté d
 Les tables sont créées automatiquement au premier lancement. Sans `DATABASE_URL`, l'application en ligne
 utiliserait SQLite sur le serveur Streamlit, qui est effacé à chaque redémarrage : les fiches seraient perdues.
 
+## Vérifier la connexion à Neon
+
+La barre latérale indique la base utilisée : « PostgreSQL (hôte Neon) » avec le nombre de fiches, ou un
+avertissement rouge si l'application en ligne tourne sans `DATABASE_URL`. Pour contrôler côté Neon, ouvrir
+le SQL Editor et lancer `SELECT * FROM audits ORDER BY id DESC;` après avoir soumis une fiche.
+
 ## Pages
 
 - **Accueil** : les 5 rubriques avec le nombre de fiches, le dernier audit et le score moyen.

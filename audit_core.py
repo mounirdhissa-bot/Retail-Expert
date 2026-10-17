@@ -204,3 +204,10 @@ def lire_fiche(engine, audit_id):
         reps = conn.execute(select(audit_reponses).where(audit_reponses.c.audit_id == audit_id)
                             .order_by(audit_reponses.c.id)).all()
     return a._mapping, [r._mapping for r in reps]
+
+
+def info_base(engine):
+    """Type de base, hôte (sans identifiants) et nombre de fiches enregistrées."""
+    with engine.connect() as conn:
+        nb = conn.execute(select(func.count()).select_from(audits)).scalar()
+    return {"type": engine.dialect.name, "hote": engine.url.host, "nb_fiches": nb}
