@@ -127,6 +127,7 @@ _ZONE_STOCKAGE = [
     ('caisses_propres', 'Contrôles', 'Général', 'Caisses de stockage très propres', False),
     ('glace_caisses', 'Contrôles', 'Général', 'Glace présente dans toutes les caisses, produits séparés de la glace par un plastique', False),
     ('bacs_eau_glace', 'Contrôles', 'Général', "Seiche nettoyée, crevette grise, sardine et anchois stockés en bac, trempés dans l'eau et la glace", False),
+    ('etiquetage_surgeles', 'Contrôles', 'Stockage surgelé', "Barquettes bien étiquetées (identification du produit, poids, date de réception, date d'expiration)", False),
 ]
 
 _CUISINE = [
