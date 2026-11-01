@@ -116,14 +116,17 @@ _RESPONSABLE_MAGASIN = [
 _ZONE_STOCKAGE = [
     ('rangement', 'Contrôles', 'Général', 'Zone rangée, allées dégagées', False),
     ('sol', 'Contrôles', 'Général', 'Aucune marchandise posée à même le sol', False),
-    ('fifo', 'Contrôles', 'Général', 'Rotation des stocks respectée (FIFO / FEFO)', False),
-    ('dlc', 'Contrôles', 'Général', 'Aucun produit à DLC dépassée', False),
+    ('fifo_caisses', 'Contrôles', 'Général', 'Rotation des stocks respectée (FIFO : article plus ancien en caisse du haut, nouvel arrivage en caisse du bas)', False),
+    ('petite_qte', 'Contrôles', 'Général', 'Articles de caisse (crevettes, merlan ration, sole ration) stockés en petite quantité par caisse (5 kg maximum)', False),
     ('temp_froid', 'Contrôles', 'Général', 'Températures des chambres froides conformes', False),
     ('releves_temp', 'Contrôles', 'Général', 'Relevés de température enregistrés', False),
     ('separation', 'Contrôles', 'Général', "Séparation alimentaire / non alimentaire / produits d'entretien", False),
-    ('etiquetage', 'Contrôles', 'Général', 'Étiquetage et traçabilité des lots', False),
+    ('poly_nobles', 'Contrôles', 'Général', 'Poissons nobles et poissons à écailles stockés dans des caisses en polystyrène (loup, daurade, rouget, saint-pierre...)', False),
     ('nuisibles', 'Contrôles', 'Général', 'Absence de nuisibles, plan de lutte à jour', False),
     ('proprete', 'Contrôles', 'Général', 'Propreté générale de la zone', False),
+    ('caisses_propres', 'Contrôles', 'Général', 'Caisses de stockage très propres', False),
+    ('glace_caisses', 'Contrôles', 'Général', 'Glace présente dans toutes les caisses, produits séparés de la glace par un plastique', False),
+    ('bacs_eau_glace', 'Contrôles', 'Général', "Seiche nettoyée, crevette grise, sardine et anchois stockés en bac, trempés dans l'eau et la glace", False),
 ]
 
 _CUISINE = [
@@ -172,7 +175,7 @@ RUBRIQUES = {
         "titre": "Audit Zone de stockage",
         "couleur": "#D97706",
         "icone": "inventory_2",  # icône Material Symbols
-        "description": "Réserve, chambres froides, rotation et traçabilité des stocks (grille provisoire).",
+        "description": "Réserve et chambres froides : rotation, conditionnement en caisses, glace et propreté.",
         "points": _ZONE_STOCKAGE,
     },
     "cuisine": {
