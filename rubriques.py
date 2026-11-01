@@ -154,6 +154,19 @@ _LABORATOIRE = [
     ('allergenes', 'Contrôles', 'Général', 'Allergènes identifiés et maîtrisés', False),
     ('nettoyage', 'Contrôles', 'Général', 'Nettoyage et désinfection réalisés', False),
     ('autocontroles', 'Contrôles', 'Général', 'Autocontrôles et analyses à jour', False),
+    ('mp_conservees', 'Contrôles', 'Général', 'Matières premières, sauces et ingrédients bien conservés et étiquetés', False),
+    ('plan_travail_sol', 'Contrôles', 'Général', 'Plan de travail et sol bien organisés et nettoyés', False),
+    ('pf_etiquetes', 'Contrôles', 'Général', "Produits finis bien étiquetés (identification du produit, poids, date de réception, date d'expiration)", False),
+    ('plan_nettoyage', 'Contrôles', 'Général', 'Plan de nettoyage affiché', False),
+    ('planning_equipes', 'Contrôles', 'Général', 'Planning des équipes affiché', False),
+    ('caisses_propres', 'Contrôles', 'Général', 'Caisses de stockage des poissons et légumes bien nettoyées', False),
+    ('legumes_laves', 'Contrôles', 'Général', 'Légumes bien lavés à la réception et très propres en zone de stockage', False),
+    ('materiel_range', 'Contrôles', 'Général', 'Matériel de cuisine bien rangé et bien lavé', False),
+    ('savon_lave_mains', 'Contrôles', 'Général', 'Quantité suffisante de savon dans les lave-mains', False),
+    ('toilettes', 'Contrôles', 'Général', 'Toilettes bien nettoyées', False),
+    ('vestiaires', 'Contrôles', 'Général', 'Vestiaires bien nettoyés et rangés', False),
+    ('separation', 'Contrôles', 'Général', "Séparation alimentaire / non alimentaire / produits d'entretien", False),
+    ('nuisibles', 'Contrôles', 'Général', 'Absence de nuisibles, plan de lutte à jour', False),
 ]
 
 
@@ -190,7 +203,7 @@ RUBRIQUES = {
         "titre": "Audit Laboratoire",
         "couleur": "#0D9488",
         "icone": "science",  # icône Material Symbols
-        "description": "Atelier de fabrication : hygiène, traçabilité et contrôles (grille provisoire).",
+        "description": "Atelier de fabrication : produits, hygiène des locaux et du personnel, traçabilité.",
         "points": _LABORATOIRE,
     },
 }
