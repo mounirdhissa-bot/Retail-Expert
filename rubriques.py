@@ -152,7 +152,7 @@ _LABORATOIRE = [
     ('temperatures', 'Contrôles', 'Général', 'Températures des enceintes conformes', False),
     ('echantillons', 'Contrôles', 'Général', 'Échantillons témoins conservés', False),
     ('allergenes', 'Contrôles', 'Général', 'Allergènes identifiés et maîtrisés', False),
-    ('nettoyage', 'Contrôles', 'Général', 'Nettoyage et désinfection réalisés', False),
+    ('nettoyage', 'Contrôles', 'Général', 'Nettoyage et désinfection générale réalisés', False),
     ('autocontroles', 'Contrôles', 'Général', 'Autocontrôles et analyses à jour', False),
     ('mp_conservees', 'Contrôles', 'Général', 'Matières premières, sauces et ingrédients bien conservés et étiquetés', False),
     ('plan_travail_sol', 'Contrôles', 'Général', 'Plan de travail et sol bien organisés et nettoyés', False),
