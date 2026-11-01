@@ -145,7 +145,7 @@ _CUISINE = [
 
 _LABORATOIRE = [
     ('acces', 'Contrôles', 'Général', "Accès réservé et sas d'hygiène respecté", False),
-    ('tenue', 'Contrôles', 'Général', 'Tenue de travail conforme', False),
+    ('tenue', 'Contrôles', 'Général', 'Tenue de travail conforme (uniforme propre, cheveux couverts, absence de bijoux et de vernis, ongles coupés...)', False),
     ('matieres', 'Contrôles', 'Général', 'Matières premières tracées (lots, fournisseurs)', False),
     ('fiches_tech', 'Contrôles', 'Général', 'Fiches techniques des recettes disponibles', False),
     ('pesees', 'Contrôles', 'Général', 'Pesées et dosages respectés', False),
